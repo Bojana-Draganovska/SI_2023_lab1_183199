@@ -1,0 +1,36 @@
+cd Desktop/
+mkdir SI_2023_lab1_183199
+cd SI_2023_lab1_183199/
+git init
+git remote add origin https://github.com/Bojana-Draganovska/SI_2023_lab1_183199.git
+code .
+git add README.md
+git commit -m "Initial commit"
+git add .
+git commit -m "Add java class"
+git push --set-upstream origin master
+git status
+git checkout -b bug1
+git add .
+git commit -m "Fix wrong loop for reading"
+git checkout master
+git status
+git checkout -b bug2
+git add .
+git commit -m "Fix wrong condition in filterOddNumbers"
+git checkout master
+git checkout -b bug3
+git add .
+git commit -m "Fix method sumEvenNumbers"
+git push --all
+git checkout master
+git merge bug1
+git push --all
+git merge bug2
+git push --all
+git checkout bug3
+git rebase master
+git checkout master
+git merge bug3
+git push --all
+git push --all --force
